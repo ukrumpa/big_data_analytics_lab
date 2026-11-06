@@ -2,19 +2,12 @@
 
 Weekly practical work for the Big Data Analytics module.
 
-## Week 1 — Linux and Hadoop HDFS
+## Labs
 
-Week 1 covers:
-1. Linux filesystem navigation and file-management commands.
-2. HDFS user/directory listing and file upload.
-3. Running Hadoop MapReduce WordCount on the `Ubuntu-dialogue-corpus` dataset.
-4. Inspecting the WordCount output in HDFS.
+| Week | Topic | Contents |
+|---|---|---|
+| [Week 1](week-1/README.md) | Linux, HDFS and MapReduce | Lab notes, shell scripts and original terminal screenshots |
 
-### Repository layout
+## Repository conventions
 
-- `week-1/code/linux-filesystem.sh` — Linux filesystem command walkthrough.
-- `week-1/code/hdfs-wordcount.sh` — HDFS upload and Hadoop WordCount workflow.
-- `week-1/results/README.md` — captured results and interpretation.
-
-The scripts are reconstructed from the commands documented in the Week 1 lab report. They have not been executed here; they require access to a Linux shell and a configured Hadoop cluster. The Ubuntu dialogue corpus is not included.
-
+Each week's directory contains its own README, executable code, and supporting evidence. Large source datasets are not committed unless explicitly required by the lab.
