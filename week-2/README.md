@@ -6,11 +6,11 @@ This lab report demonstrates two MapReduce programs using Python's `mrjob` packa
 
 - `scripts/mr_unix_wc.py` — counts characters, words, and lines.
 - `scripts/mr_word_count.py` — counts occurrences of alphabetic words.
-- `screenshots/` — the 14 original report figures, in report order.
+- `screenshots/` — all 14 original figures from the report, in report order.
 
 ## 1. Environment setup
 
-The report activates the `jhub-ml` Conda environment and creates `mr_unix_wc.py` with `nano`. See [Figure 1](screenshots/environment-setup.png).
+The report activates the `jhub-ml` Conda environment and creates `mr_unix_wc.py` with `nano` (Figure 1).
 
 ```bash
 conda activate jhub-ml
@@ -19,9 +19,9 @@ nano mr_unix_wc.py
 
 ## 2. Unix `wc`-style MapReduce job
 
-The mapper emits three key-value pairs for each input line: character count, word count, and line count. The reducer sums values for each key.
+The mapper emits three key-value pairs for each input line: character count, word count, and line count. The reducer sums values for each key. The implementation is shown in Figure 2.
 
-See [Figure 2](screenshots/mr-unix-word-count-code.png) for the code in the report. The report uses *The Owl and the Pussy-Cat* by Edward Lear as `poem.txt` input ([Figure 3](screenshots/poem-input-owl-and-pussycat.png)).
+The report uses *The Owl and the Pussy-Cat* by Edward Lear as `poem.txt` input (Figure 3).
 
 Run locally:
 
@@ -29,7 +29,7 @@ Run locally:
 python mr_unix_wc.py poem.txt
 ```
 
-Recorded output:
+Recorded output (Figure 4):
 
 | Measure | Result |
 |---|---:|
@@ -37,19 +37,20 @@ Recorded output:
 | Lines | 42 |
 | Words | 242 |
 
-The recorded terminal output is in [Figure 4](screenshots/unix-wc-count-results.png).
-
 ## 3. Word-frequency MapReduce job
 
-The second program uses the regular expression `r"[a-zA-Z]+"` to extract alphabetic words. The mapper emits `(word, 1)` and the reducer sums each word's occurrences.
+The second program uses the regular expression `r"[a-zA-Z]+"` to extract alphabetic words. The mapper emits `(word, 1)` and the reducer sums each word's occurrences. The code is shown in Figure 5.
 
-See [Figure 5](screenshots/word-frequency-count-code.png). The report runs:
+Run locally:
 
 ```bash
 python mr_word_count.py poem.txt
 ```
 
-The local word-frequency output is captured across [Figures 6–8](screenshots/local-word-count-output-a.png), [Figure 7](screenshots/local-word-count-output-b.png), and [Figure 8](screenshots/local-word-count-output-c.png).
+The local word-frequency output is captured in Figures 6–8:
+- [Figure 6 — output, part A](screenshots/local-word-count-output-a.png)
+- [Figure 7 — output, part B](screenshots/local-word-count-output-b.png)
+- [Figure 8 — output, part C](screenshots/local-word-count-output-c.png)
 
 ## 4. Run the word-count job on Hadoop
 
@@ -63,7 +64,10 @@ python mr_word_count.py -r hadoop \
   hdfs:///user/up2542055/Ubuntu-dialogue-corpus
 ```
 
-The report describes the input being split into 12 chunks and processed in parallel. The job progress and completion output are shown in [Figures 9–11](screenshots/hadoop-wordcount-progress.png), [Figure 10](screenshots/hadoop-wordcount-job-summary.png), and [Figure 11](screenshots/hadoop-wordcount-framework-details.png).
+The report describes the input being split into 12 chunks and processed in parallel. The job progress and completion evidence is shown in Figures 9–11:
+- [Figure 9 — job progress](screenshots/hadoop-wordcount-progress.png)
+- [Figure 10 — job summary](screenshots/hadoop-wordcount-job-summary.png)
+- [Figure 11 — framework details](screenshots/hadoop-wordcount-framework-details.png)
 
 ## 5. Run with five reducers
 
@@ -78,7 +82,10 @@ python mr_word_count.py -r hadoop \
   -D mapred.reduce.tasks=5
 ```
 
-The `-D mapred.reduce.tasks=5` option configures five reducer tasks. The report's second Hadoop run is documented in [Figures 12–14](screenshots/hadoop-five-reducers-progress.png), [Figure 13](screenshots/hadoop-five-reducers-summary.png), and [Figure 14](screenshots/hadoop-five-reducers-final-output.png).
+The `-D mapred.reduce.tasks=5` option configures five reducer tasks. The second Hadoop run is documented in Figures 12–14:
+- [Figure 12 — job progress](screenshots/hadoop-five-reducers-progress.png)
+- [Figure 13 — job summary](screenshots/hadoop-five-reducers-summary.png)
+- [Figure 14 — final output](screenshots/hadoop-five-reducers-final-output.png)
 
 ## Reproducing the lab
 
