@@ -5,7 +5,7 @@ This lab explores PySpark: loading and inspecting CSV data, DataFrame selection 
 ## Contents
 
 - `scripts/week4_spark_exercises.py` — consolidated editable examples reconstructed from the report.
-- `screenshots/` — 25 original PNG figures extracted from the DOCX report. Figure numbering is described in the report; image files retain their source media numbering.
+- `screenshots/` — 24 uploaded PNG figures, named `figure-02.png` through `figure-25.png`.
 
 ## 1. Flight data and DataFrame operations
 
@@ -34,3 +34,54 @@ spark-submit scripts/week4_spark_exercises.py
 ```
 
 The source datasets are not included. The script consolidates the report's examples into one sequence; run sections independently if input schemas or paths differ. The 70/30 split uses a fixed seed for reproducibility, so results may differ from the report.
+
+## Screenshots
+
+![Figure 2](screenshots/figure-02.png)
+
+![Figure 3](screenshots/figure-03.png)
+
+![Figure 4](screenshots/figure-04.png)
+
+![Figure 5](screenshots/figure-05.png)
+
+![Figure 6](screenshots/figure-06.png)
+
+![Figure 7](screenshots/figure-07.png)
+
+![Figure 8](screenshots/figure-08.png)
+
+![Figure 9](screenshots/figure-09.png)
+
+![Figure 10](screenshots/figure-10.png)
+
+![Figure 11](screenshots/figure-11.png)
+
+![Figure 12](screenshots/figure-12.png)
+
+![Figure 13](screenshots/figure-13.png)
+
+![Figure 14](screenshots/figure-14.png)
+
+![Figure 15](screenshots/figure-15.png)
+
+![Figure 16](screenshots/figure-16.png)
+
+![Figure 17](screenshots/figure-17.png)
+
+![Figure 18](screenshots/figure-18.png)
+
+![Figure 19](screenshots/figure-19.png)
+
+![Figure 20](screenshots/figure-20.png)
+
+![Figure 21](screenshots/figure-21.png)
+
+![Figure 22](screenshots/figure-22.png)
+
+![Figure 23](screenshots/figure-23.png)
+
+![Figure 24](screenshots/figure-24.png)
+
+![Figure 25](screenshots/figure-25.png)
+
